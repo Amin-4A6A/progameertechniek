@@ -10,3 +10,8 @@ function myFunction() {
     console.log('result')
     document.getElementById("words").innerHTML = result;
 }
+function hoofdletter() {
+    var str = document.getElementById('text').value;
+    var res = str.toUpperCase();
+    document.getElementById("demo").innerHTML = res;
+}
