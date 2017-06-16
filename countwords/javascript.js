@@ -41,5 +41,22 @@ function langsteLetter() {
 function vaakVoorkomt(str) {
   var str = document.getElementById('text').value;
   var words = str.split(" ");
-  var meestVoorkomende = split.length;
+  var meestVoorkomende = words.length;
+
+  var hetmeeste = 0;
+    var woordjes = 0;
+    for (var i = 0; i < meestVoorkomende; i++) {
+      woordje = words[i];
+      teller = 0;
+      for (var e = 0; e < meestVoorkomende; e++) {
+        if (woordje == words[e]) {
+          teller++;
+        }
+      }
+      if (teller > hetmeeste) {
+        hetmeeste = teller;
+        woordjes = woordje;
+      }
+    }
+    document.getElementById("hoevaak").innerHTML = woordjes + " en het komt: " + hetmeeste + " voor.";
 }
