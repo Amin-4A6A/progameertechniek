@@ -10,8 +10,18 @@ function myFunction() {
     console.log('result')
     document.getElementById("words").innerHTML = result;
 }
-function hoofdletter() {
-    var str = document.getElementById('text').value;
-    var res = str.toUpperCase();
-    document.getElementById("demo").innerHTML = res;
+
+function verander(str){
+
+  return str.replace(/\w\S*/g, function(str){
+    return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
+  });
 }
+
+function hoofdletter(){
+var str = document.getElementById('text').value;
+ var letter =  verander(str);
+  document.getElementById("demo").innerHTML = letter;
+};
+
+// eerts split = array
